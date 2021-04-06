@@ -68,7 +68,7 @@ function getBgService<T>(service: string) {
 export const stateService = new StateService();
 export const messagingService = new BrowserMessagingService();
 export const searchService = new PopupSearchService(getBgService<SearchService>('searchService')(),
-    getBgService<CipherService>('cipherService')(), getBgService<ConsoleLogService>('consoleLogService')());
+    getBgService<CipherService>('cipherService')(), getBgService<ConsoleLogService>('consoleLogService')(), getBgService<I18nService>('i18nService')());
 
 export function initFactory(platformUtilsService: PlatformUtilsService, i18nService: I18nService, storageService: StorageService,
     popupUtilsService: PopupUtilsService): Function {
